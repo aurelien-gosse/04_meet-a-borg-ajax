@@ -1,0 +1,15 @@
+html, body{
+  height: 100%;
+}
+body{
+  font-family: $fontTxt;
+  font-size: 1rem;
+  color: #212529;
+}
+::selection{
+  background:#ff749e;
+  color:#fff
+}
+.hidden{
+  display: none;
+}

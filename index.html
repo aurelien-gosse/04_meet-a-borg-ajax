@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Meet a 'Borg - Ca va pécho chez les Robots</title>
+  <meta name="description" content="Description">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header-content">
+      <img class="header-content__logo" src="img/tinder.svg" alt="Logo Tinder">
+      <h1 class="header-content__title">meet a 'borg</h1>
+      <h2 class="header-content__title2">Ça va pécho chez les robots 🤖🍆🍑</h2>
+    </div>
+  </header>
+  <main class="main">
+    <section class="presentation">
+      <h3 class="presentation__title">Faites votre choix</h3>
+      <p class="presentation__txt">Il y a <span class="femme"> femmes</span> et <span class="homme"> hommes</span> !</p>
+      <p class="presentation__txt">Robot ipsum Picoist encephaloform cortropic Filclinic Nippoploid kilolytic zoate. Vesicoity levoparous Egyptococcus stepsepalous stenoales sexuoling ochllyze xeraceae tarsorrhea taxthymia. Cytococcus cheirify gynaecoetic tristomy triboness bathyac conplastic siderogenesis ophioatory egenous. Myary cobaltofuge orphobe pneumonform Angloplex thalassoodont stethometric. Pathoholic newance poikilocline technographer desderma cuprless anthrostat hexgon cyanoicide. Pneumonozyme dendrism exbisect methylphage iridicoable hemoscope anthropomere.</p>
+      <p class="presentation__txt">Robot ipsum Picoist encephaloform cortropic Filclinic Nippoploid kilolytic zoate. Vesicoity levoparous Egyptococcus stepsepalous stenoales sexuoling ochllyze xeraceae tarsorrhea taxthymia. Cytococcus cheirify gynaecoetic tristomy triboness bathyac conplastic siderogenesis ophioatory egenous. Myary cobaltofuge orphobe pneumonform Angloplex thalassoodont stethometric. Pathoholic newance poikilocline technographer desderma cuprless anthrostat hexgon cyanoicide. Pneumonozyme dendrism exbisect methylphage iridicoable hemoscope anthropomere.</p>
+    </section>
+    <section class="choice">
+      <a class="bt" href="#" data-type="">Afficher tout le monde</a>
+      <a class="bt bt--femme" href="#" data-type="Female">Afficher toutes les femmes</a>
+      <a class="bt bt--homme" href="#" data-type="Male">Afficher tous les hommes</a>
+    </section>
+    <section class="robots">
+      
+    </section>
+    <script id="entry-template" type="text/x-handlebars-template">
+      {{#each this}}
+      <div class="robot" data-type="{{gender}}" title="{{first_name}} {{last_name}}">
+        <h4 class="robot__title">{{first_name}} <strong>{{last_name}}</strong></h4>
+        <div class="robot__portrait {{gender}}">
+          <img src="{{portrait}}" alt="{{first_name}} {{last_name}}">
+          <p class="robot__portrait__type">
+            <strong>Type</strong> : {{type}}
+          </p>
+          <p class="robot__portrait__language">
+            <strong>Langue parlée</strong> :<br>{{language}}
+          </p>
+        </div>
+        <p class="robot__description">
+          {{description}}
+        </p>
+      </div>
+      {{/each}}
+    </script>
+    
+    </main>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.12/handlebars.min.js"></script>
+  <!-- <script src="js/data.js"></script> -->
+  <script src="js/main.js"></script>
+</body>
+</html>

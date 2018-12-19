@@ -1,0 +1,58 @@
+@keyframes bigTider {
+  from {transform: scale(1);} 
+  to {transform: scale(1.2);} 
+}
+@keyframes big♥ {
+  from {transform: scale(1);} 
+  to {transform: scale(50);} 
+}
+
+.header{
+  height: 100%;
+  background-image: linear-gradient(to right bottom,#fff,#fff,#fff,#fff,#fff,#f7f4ff,#f3e8fd,#f1dbf9,#f5bce8,#fd99c9,#ff749e,#fd5068);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .header-content{
+    text-align: center;
+    position: relative;
+    &::before{
+      content: '♥';
+      color: red;
+      opacity: 0.2;
+      position: absolute;
+      position: absolute;
+      top: calc(50% - 60px);
+      left: 50%;
+      transform: translate(-50%,-50%);
+      animation-name: big♥;
+      animation-duration: 7s;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+      animation-timing-function: linear;
+    }
+    &__logo{
+      position: relative;
+      width: 300px;
+      animation-name: bigTider;
+      animation-duration: 5s;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+      animation-timing-function: linear;
+    }
+    &__title{
+      position: relative;
+      font-family: $fontTitle;
+      font-weight: normal;
+      text-transform: uppercase;
+      font-size: 50px;
+      color: #fd5068;
+    }
+    &__title2{
+      position: relative;
+      font-family: $fontTitle2;
+      font-size: 18px;
+      font-weight: normal;
+    }
+  }
+}
