@@ -2,8 +2,8 @@ let source   = document.getElementById("entry-template").innerHTML;
 let template = Handlebars.compile(source);
 
 $.getJSON("https://wt-902485dbb4fca4fccee3a0efcde5b34c-0.sandbox.auth0-extend.com/robots")
-.done(function(data){
-  let html = template(data);
+.done(function(robots){
+  let html = template(robots);
   $(".robots").append(html);
 
   let femmes = $(".Female").length;
@@ -19,16 +19,16 @@ $.getJSON("https://wt-902485dbb4fca4fccee3a0efcde5b34c-0.sandbox.auth0-extend.co
 
 let bts = $(".choice .bt");
 
-bts.click(function (event) {
+bts.on('click', function (event) {
   event.preventDefault();
 
   let robots = $(".robot");
-  robots.hide();
-
   let genre = $(this).data("type");
-  $(".robots [data-type=\""+genre+"\"]").show();
 
-  if(genre==""){
+  if(genre!=""){
+    $(".robots [data-type=\""+genre+"\"]").show();
+    $(".robot:not([data-type=\""+genre+"\"])").hide();
+  }else{
     robots.show();
   }
 
